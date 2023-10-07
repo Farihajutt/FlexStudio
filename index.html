@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .main {
+            height: max-content;
+            width: 100%;
+            display: flex;
+        }
+
+        .section1 {
+            width: 20%;
+            height: max-content;
+            position: fixed;
+            left: 0;
+    
+
+        
+        }
+
+        .section2 {
+            height: max-content;
+            position: absolute;
+            width: 80%;
+             left: 20%;
+             /* visibility: hidden; */
+             z-index: 0;
+           
+        }
+
+        .icon1 {
+            height: 25px;
+            width: 25px;
+            position: absolute;
+            top: 20px;
+            margin-left: 20px;
+        }
+
+        .icon2 {
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            display: none;
+        }
+
+        .bars {
+            font-size: 130%;
+            color: rgba(0, 0, 0, 0.551);
+        }
+
+        .navbar {
+            height: 750px;
+            width: 100%;
+            position: absolute;
+            top: 80px;
+            /* border: 5px solid red; */
+
+        }
+
+        .image {
+            height: 180px;
+            width: 170px;
+            margin-left: 10%;
+            background-image: url(./Images/butterfly_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        .greaterthan {
+            margin-left: 10px;
+        }
+
+        .navlist {
+            height: max-content;
+            width: 90%;
+            margin-left: 10%;
+        }
+
+        .text {
+            list-style: none;
+            margin-top: 20px;
+            width: 100%;
+            color: rgba(0, 0, 0, 0.854);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .dropdown {
+            position: absolute;
+            height: 100vh;
+            width: 125%;
+            background-color: gray;
+            left: 101%;
+            top: -318px;
+            visibility: hidden;
+            overflow-y: scroll;
+        
+
+        }
+
+        .botanicals {
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            background-image: url(./Images/collec-botanical-sq_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .para {
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-left: 10%;
+            margin-top: 10px;
+        }
+
+        .flowers {
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            background-image: url(./Images/flowers_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .Marine {
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            background-image: url(./Images/marine_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .dropdown1 {
+            position: absolute;
+            height: 100vh;
+            width: 125%;
+            background-color: gray;
+            left: 101%;
+            top: -358px;
+            visibility: hidden;
+            overflow-y: scroll;
+        }
+
+        .butterfly {
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            background-image: url(./Images/butterfly_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .feathers {
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            background-image: url(./Images/collec-feather_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .fish {
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            background-image: url(./Images/collec-fish-sq_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .snakes {
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            background-image: url(./Images/snakes_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .dropdown2 {
+            position: absolute;
+            height: 100vh;
+            width: 125%;
+            background-color: gray;
+            left: 101%;
+            top: -395px;
+            visibility: hidden;
+            overflow-y: scroll;
+        }
+
+        .abstract {
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            background-image: url(./Images/collec-abstract1_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .americanstate {
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            background-image: url(./Images/collec-states_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .fruit {
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            background-image: url(./Images/fruit_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .vintage {
+            height: 200px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            background-image: url(./Images/collec-boho_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .text:hover .dropdown {
+            visibility: visible;
+            
+        }
+
+        .text:hover .dropdown1 {
+            visibility: visible;
+        }
+
+        .text:hover .dropdown2 {
+            visibility: visible;
+        }
+
+        .text:hover {
+            color: rgba(180, 49, 49, 0.757);
+        }
+
+        .icons {
+            height: 30px;
+            width: 200%;
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .icon3 {
+            height: 30px;
+            margin: 10px;
+        }
+
+        .icon4 {
+            font-size: 120%;
+        }
+
+        .paragraph {
+            width: 80%;
+            margin-left: 20px;
+            margin-top: 50px;
+            line-height: 20px;
+            font-size: 80%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .borderbox {
+            height: 40px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .para1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 95%;
+        }
+
+        .para2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgba(0, 0, 0, 0.624);
+        }
+
+        .imageflower {
+            height: 170vh;
+            width: 100%;
+            background-image: url(https://cdn.shopify.com/s/files/1/0085/5628/1922/files/flowers_1600x.jpg?v=1614286921);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .section3 {
+            height: max-content;
+            width: 100%;
+            position: absolute;
+            background-color: rgb(249, 247, 245);
+            padding-bottom: 50px;
+        
+        }
+
+        .one1 {
+            font-size: 160%;
+            color: rgba(0, 0, 0, 0.853);
+            font-weight: lighter;
+            text-align: center;
+            margin-top: 80px;
+            cursor: pointer;
+        }
+
+        .one1:hover {
+            color: rgb(144, 82, 77);
+        }
+
+        .one2 {
+            width: 70px;
+            margin: auto;
+            margin-top: 30px;
+            border: 1px solid rgba(144, 82, 77, 0.405);
+        }
+
+        .one3 {
+            height: 300px;
+            width: 100%;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .one8 {
+            height: 100%;
+            width: 20%;
+
+        }
+
+        .one81 {
+            height: 100%;
+            width: 20%;
+        }
+
+        .one82 {
+            height: 100%;
+            width: 20%;
+            position: relative;
+        }
+
+        .one83 {
+            height: 100%;
+            width: 20%;
+            position: relative;
+        }
+
+        .one84 {
+            height: 100%;
+            width: 20%;
+            position: relative;
+        }
+
+        .one85 {
+            height: 100%;
+            width: 20%;
+            position: relative;
+        }
+
+        .one86 {
+            height: 100%;
+            width: 20%;
+            position: relative;
+        }
+
+        .one87 {
+            height: 100%;
+            width: 20%;
+            position: relative;
+        }
+
+        .one88 {
+            height: 100%;
+            width: 20%;
+            position: relative;
+        }
+
+        .one89 {
+            height: 100%;
+            width: 20%;
+            position: relative;
+        }
+
+        .one90 {
+            height: 100%;
+            width: 20%;
+            position: relative;
+        }
+
+        .one91 {
+            height: 100%;
+            width: 20%;
+            position: relative;
+        }
+
+        .one11 {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            z-index: 1;
+            border-radius: 50%;
+            background-color: #EED9B5;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .one12 {
+            font-size: 9.8px;
+            color: #4E4D4D;
+        }
+
+        .one20 {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            z-index: 1;
+            border-radius: 50%;
+            background-color: rgb(144, 82, 77);
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .one21 {
+            font-size: 9.8px;
+            color: white;
+        }
+
+        .one4 {
+            height: 170px;
+            width: 100%;
+            background-image: url(./Images/shop195_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: 40px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .dropdown4 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            transition: .25s;
+
+        }
+
+        .one4:hover .dropdown4 {
+            background-color: rgba(255, 255, 255, 0.598);
+
+        }
+
+        .one13 {
+            height: 30px;
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #EED9B5;
+            position: absolute;
+            border-radius: 20px;
+        }
+
+        .one5 {
+            height: 250px;
+            width: 100%;
+            background-image: url(./Images/blaze2_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        .one6 {
+            height: 250px;
+            width: 100%;
+            background-image: url(./Images/webcicadas_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        .one7 {
+            height: 250px;
+            width: 100%;
+            background-image: url(./Images/shop149_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        .one9 {
+            text-align: center;
+            font-size: 15px;
+            color: #466146;
+            margin-top: 40px;
+        }
+
+        .one10 {
+            text-align: center;
+            font-size: 15px;
+            color: #466146;
+        }
+
+        .one22 {
+            height: 250px;
+            width: 100%;
+            background-image: url(./Images/shop127_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        .one23 {
+            height: 250px;
+            width: 100%;
+            background-image: url(./Images/shop189_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+            position: relative;
+
+        }
+
+        .one24 {
+            height: 250px;
+            width: 100%;
+            background-image: url(./Images/shop177_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+
+        }
+
+        .one25 {
+            height: 250px;
+            width: 100%;
+            background-image: url(./Images/wake1_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+
+        }
+
+        .one26 {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            z-index: 1;
+            border-radius: 50%;
+            background-color: rgb(238, 195, 93);
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .one27 {
+            height: 250px;
+            width: 100%;
+            background-image: url(./Images/webss21_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+            position: relative;
+
+        }
+
+        .one28 {
+            height: 250px;
+            width: 100%;
+            background-image: url(./Images/shop110_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        .one29 {
+            height: 250px;
+            width: 100%;
+            background-image: url(./Images/shop707_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+
+        }
+
+        .one30 {
+            height: 250px;
+            width: 100%;
+            background-image: url(./Images/shop217_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+            position: relative;
+
+        }
+
+        .section4 {
+            height: max-content;
+            width: 100%;
+            background-color: rgb(236, 236, 236);
+            position: absolute;
+            margin-top: 50px;
+        }
+
+        .one31 {
+            height: max-content;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+
+        }
+
+        .one32 {
+            font-size: 25px;
+            color: #000000;
+            font-weight: lighter;
+            margin-top: 40px;
+            width: max-content;
+        }
+
+        .one33 {
+            height: 35px;
+            width: 100%;
+            border-radius: 35px;
+            margin-top: 20px;
+            border: 1px solid;
+            padding-left: 20px;
+            font-size: 15px;
+
+        }
+
+        .one34 {
+            height: 35px;
+            width: 65%;
+            border-radius: 35px;
+            border: 1px solid;
+            margin-top: 20px;
+            padding-left: 20px;
+            font-size: 15px;
+        }
+
+        .one35 {
+            height: 35px;
+            width: 30%;
+            border-radius: 35px;
+            border: 1px solid;
+            margin-top: 20px;
+            margin-left: 25px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(0, 0, 0, 0.657);
+
+        }
+
+        .one40 {
+            height: 250px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .six {
+            height: max-content;
+            width: 100%;
+            background-color: rgb(249, 247, 245);
+            padding: 1px;
+
+
+        }
+
+        .six1 {
+            height: max-content;
+            width: 95%;
+            margin: auto;
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .six2 {
+            height: 280px;
+            width: 32%;
+            border: 1px solid;
+        }
+
+        .six3 {
+            height: 280px;
+            width: 32%;
+            border: 1px solid;
+        }
+
+        .six4 {
+            height: 280px;
+            width: 32%;
+            border: 1px solid;
+        }
+
+        .six5 {
+            height: 130px;
+            width: 100%;
+            background-image: url(./Images/framing_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .six6 {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .six7 {
+            margin-top: 20px;
+            margin-left: 20px;
+            font-size: 12px;
+            color: #4E4D4D;
+        }
+
+        .six8 {
+            height: 130px;
+            width: 100%;
+            background-image: url(./Images/post-tools2_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .six9 {
+            height: 130px;
+            width: 100%;
+            background-image: url(./Images/post-101_1600x.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .logo {
+            height: 150px;
+            width: 30%;
+            margin: auto;
+            margin-top: 60px;
+            background-image: url(./Images/studio__logo-brown_1600x.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .six18{
+            height: max-content;
+            width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .six10 {
+            margin-top: 60px;
+            line-height: 25px;
+            font-size: 15px;
+        }
+
+        .six11 {
+            font-size: 15px;
+            color: #AE7470;
+            font-weight: lighter;
+        }
+
+        .six12 {
+            color: #665B55;
+        }
+        .six13{
+            height: 35px;
+            width: 15%;
+            border: 1px solid;
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .six14{
+            font-size: 15px;
+            color: #4E4D4D;
+        }
+        .six15{
+            font-size: 15px;
+            color: #4E4D4D;
+            margin-top: 10px;
+            margin-left: 5px;
+
+        }
+        .six16{
+            color: #4E4D4D;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12.5px;
+
+        }
+
+
+
+
+
+
+
+        /* .......////// media queries........////  */
+        @media screen and (max-width:980px) {
+            .image {
+                width: 70%;
+                height: 120px;
+                margin: auto;
+
+            }
+
+            .section1 {
+                width: 20%;
+            }
+
+            .paragraph {
+                margin-top: 60px;
+                margin-left: 10px;
+            }
+
+            .navlist {
+                font-size: 90%;
+            }
+
+            .navbar {
+                height: 820px;
+            }
+
+            .icons {
+                width: 100%;
+            }
+
+            .greaterthan {
+                margin-left: 130px;
+
+            }
+
+            .one34 {
+                width: 100%;
+            }
+
+            .one35 {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .one40 {
+                width: 100%;
+            }
+            .six13{
+                width: 25%;
+            }
+            .six15{
+                margin-top: 0;
+            }
+
+
+
+        }
+
+        @media screen and (max-width:800px) {
+            .navbar {
+                display: none;
+            }
+
+            .section1 {
+                background-color: white;
+                height: 40px;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                z-index: 1;
+            }
+
+            .icon1 {
+                right: 20px;
+                position: absolute;
+                top: 10px;
+            }
+
+            .icon2 {
+                display: block;
+                top: 10px;
+                left: 20px;
+            }
+
+            .section2 {
+                width: 100%;
+            }
+
+            .borderbox {
+                display: none;
+            }
+
+            .icons {
+                width: 95%;
+            }
+
+            .section3 {
+                width: 100%;
+                height: 2000vh;
+            }
+
+            .one3 {
+                display: block;
+            }
+
+            .section4 {
+                margin-top: 1300px;
+                /* visibility: hidden; */
+            }
+
+            .one8 {
+                width: 50%;
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .one81 {
+                display: inline-block;
+                vertical-align: top;
+                width: 49%;
+            }
+
+            .one82 {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+                margin-top: 80px;
+            }
+
+            .one83 {
+                display: inline-block;
+                vertical-align: top;
+                width: 49%;
+                margin-top: 80px;
+            }
+
+            .one84 {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+                margin-top: 440px;
+            }
+
+            .one85 {
+                display: inline-block;
+                vertical-align: top;
+                width: 49%;
+                margin-top: 440px;
+            }
+
+            .one86 {
+                width: 49.5%;
+                display: inline-block;
+                vertical-align: top;
+                background-color: rgb(249, 247, 245);
+                margin-top: 50px;
+            }
+
+            .one87 {
+                width: 49.5%;
+                display: inline-block;
+                vertical-align: top;
+                background-color: rgb(249, 247, 245);
+                margin-top: 50px;
+            }
+
+            .one88 {
+                width: 49%;
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 800px;
+                background-color: rgb(249, 247, 245);
+            }
+
+            .one89 {
+                width: 50%;
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 850px;
+                background-color: rgb(249, 247, 245);
+            }
+
+            .one90 {
+                width: 49%;
+                display: inline-block;
+                vertical-align: top;
+                background-color: rgb(249, 247, 245);
+                margin-top: 40px;
+            }
+
+            .one91 {
+                width: 50%;
+                display: inline-block;
+                vertical-align: top;
+                background-color: rgb(249, 247, 245);
+                margin-top: 40px;
+            }
+
+            .one31 {
+                width: 60%;
+            }
+
+            .one26 {
+                right: 0;
+                height: 100px;
+                width: 100px;
+
+            }
+
+            .one11 {
+                right: 0;
+                height: 100px;
+                width: 100px;
+
+            }
+
+            .one27 {
+                height: 300px;
+                margin-top: 40px;
+            }
+
+            .one4 {
+                height: 250px;
+            }
+
+            .one5 {
+                height: 300px;
+            }
+
+            .one6 {
+                height: 300px;
+                margin-top: 40px;
+            }
+
+            .one7 {
+                height: 300px;
+                margin-top: 40px;
+            }
+
+            .one22 {
+                height: 300px;
+            }
+
+            .one23 {
+                height: 300px;
+            }
+
+            .one24 {
+                height: 250px;
+                margin-top: 40px;
+            }
+
+            .one25 {
+                height: 300px;
+                margin-top: 40px;
+            }
+
+            .one29 {
+                height: 300px;
+                margin-top: 40px;
+            }
+
+            .one30 {
+                height: 300px;
+                margin-top: 40px;
+            }
+            .six1{
+                display: block;
+            }
+            .six2{
+                width: 100%;
+                height: 450px;
+            }
+            .six3{
+                width: 100%;
+                height: 450px;
+            }
+            .six4{
+                width: 100%;
+                height: 450px;
+            }
+            .six5{
+                height: 300px;
+            }
+            .six8{
+                height: 300px;
+            }
+            .six9{
+                height: 300px;
+            }
+            .logo{
+                height: 100px;
+                width: 200px;
+            }
+
+        }
+        @media screen and (max-width:550px) {
+            .six10{
+                width: 80%;
+            }
+            .six13{
+                width: 40%;
+            }
+            
+
+        }
+        @media screen and (max-width:550px){
+            .section4{
+                margin-top: 7000px;
+            }
+            .one8{
+
+                width: 100%;
+            }
+            .one4{
+                height: 500px;
+                margin-top: 0;
+            }
+            .one81{
+                width: 100%;
+                margin-top: 900px;
+            }
+            .one5{
+                height: 600px;
+
+            }
+            .one82{
+                width: 100%;
+                margin-top: 300px;
+            }
+            .one6{
+                height: 600px;
+            }
+            .one83{
+                width: 100%;
+                margin-top: 400px;
+            }
+            .one7{
+                height: 600px;
+            }
+            .one84{
+                width: 100%;
+                margin-top: 250px;
+            }
+            .one22{
+                height: 600px;
+            }
+            .one85{
+                width: 100%;
+                margin-top: 3000px;
+            }
+            .one23{
+                height: 600px;
+            }
+            .one86{
+                width: 100%;
+                margin-top: 1700px;
+            }
+            .one24{
+                height: 600px;
+            }
+            .one87{
+                width: 100%;
+                margin-top: 400px;
+            }
+            .one25{
+                height: 600px;
+            }
+            .one27{
+                height: 600px;
+            }
+            .one88{
+                width: 100%;
+                margin-top: 2500px;
+            }
+            .one29{
+                height: 600px;
+            }
+            .one89{
+                width: 100%;
+                margin-top: 1100px;
+            }
+            .one91{
+                width: 100%;
+                margin-top: 1700px;
+            }
+            .one30{
+                height: 600px;
+               
+            }
+            .one90{
+                width: 100%;
+                margin-top: 400px;
+            }
+            .one28{
+                height: 600px;
+            }
+            .six10{
+                margin-left: 20px;
+            }
+        }
+        @media screen and (max-width:430px){
+            .one31{
+                width: 90%;
+            }
+            .six5{
+                height: 200px;
+            }
+            .six2{
+                height: 350px;
+            }
+            .six3{
+                height: 350px;
+            }
+            .six4{
+                height: 350px;
+            }
+            .six8{
+                height: 200px;
+            }
+            .six9{
+                height: 200px;
+            }
+            .six10{
+                margin-left: 20px;
+            }
+        }
+        @media screen and (max-width:340px){
+            .six13{
+                width: 60%;
+            }
+
+        }
+        @media screen and (max-width:298px){
+            .one32{
+                font-size: 20px;
+            }
+            }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="section1">
+            <div class="icon1">
+                <i class="fa-solid fa-cart-shopping" style="color: #292929;"></i>
+            </div>
+            <div class="icon2">
+                <i class="fa-solid fa-bars bars" style="color: #262627;"></i>
+            </div>
+            <div class="navbar">
+                <div class="image"></div>
+                <ul class="navlist">
+                    <li class="text">Home</li>
+                    <li class="text">Art Prints: Flora
+                        <i class="fa-solid fa-greater-than greaterthan" style="color:rgba(0, 0, 0, 0.854);"></i>
+                        <div class="dropdown">
+                            <div class="botanicals"></div>
+                            <p class="para">Botanicals</p>
+                            <div class="flowers"></div>
+                            <p class="para">Flowers</p>
+                            <div class="Marine"></div>
+                            <p class="para">Marine Life</p>
+                        </div>
+                    </li>
+                    <li class="text">Art Prints: Fauna
+                        <i class="fa-solid fa-greater-than greaterthan" style="color:rgba(0, 0, 0, 0.854);"></i>
+                        <div class="dropdown1">
+                            <div class="butterfly"></div>
+                            <p class="para">Butterflies</p>
+                            <div class="feathers"></div>
+                            <p class="para">Feathers</p>
+                            <div class="fish"></div>
+                            <p class="para">Fish</p>
+                            <div class="snakes"></div>
+                            <p class="para">Snakes</p>
+                        </div>
+                    </li>
+                    <li class="text">Art Prints: Modern
+                        <i class="fa-solid fa-greater-than greaterthan" style="color:rgba(0, 0, 0, 0.854);"></i>
+                        <div class="dropdown2">
+                            <div class="abstract"></div>
+                            <p class="para">Abstracts</p>
+                            <div class="americanstate"></div>
+                            <p class="para">American States</p>
+                            <div class="fruit"></div>
+                            <p class="para">Fruit</p>
+                            <div class="vintage"></div>
+                            <p class="para">Vintage Rugs</p>
+                        </div>
+                    </li>
+                    <li class="text">Original Paintings</li>
+                    <li class="text">Studio Blog</li>
+                    <li class="text">About the Artist</li>
+                    <li class="text">Contact</li>
+                    <li class="text">FAQ</li>
+                    <li class="text">Buy Flex</li>
+                </ul>
+                <div class="icons">
+                    <div class="icon3"><i class="fa-brands fa-behance icon4" style="color: #1c1c1c;"></i></div>
+                    <div class="icon3"><i class="fa-solid fa-basketball icon4" style="color: #2b2b2b;"></i></div>
+                    <div class="icon3"><i class="fa-brands fa-square-instagram icon4" style="color: #303031;"></i></div>
+                    <div class="icon3"><i class="fa-brands fa-pinterest-p icon4" style="color: #141415;"></i></div>
+                    <div class="icon3"><i class="fa-brands fa-tiktok icon4" style="color: #0c0d0d;"></i></div>
+                    <div class="icon3"><i class="fa-brands fa-youtube icon4" style="color: #111213;"></i></div>
+                </div>
+                <p class="paragraph">© 2023 Flex Theme Studio. <br>
+                    Designed by Out of the Sandbox. <br>
+                    Powered by Shopify</p>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="borderbox">
+                <p class="para1"><b class="para2">Get a third print FREE</b>when you buy two - this weekend only!</p>
+            </div>
+            <div class="imageflower"></div>
+            <div class="section3">
+                <h1 class="one1">From the Gallery</h1>
+                <div class="one2"></div>
+                <div class="one3">
+                    <div class="one8">
+                        <div class="one4">
+                            <div class="dropdown4">
+                            </div>
+                        </div>
+                        <p class="one9">Trout No.2 <br> from $28.00 CAD</p>
+                    </div>
+                    <div class="one81">
+                        <div class="one5"></div>
+                        <p class="one10">Storm <br>
+                            from $18.00 CAD</p>
+                    </div>
+                    <div class="one82">
+                        <div class="one11">
+                            <p class="one12">Staff <br>Pick</p>
+                        </div>
+                        <div class="one6"></div>
+                        <p class="one10">Cicadas <br>
+                            from $18.00 CAD</p>
+                    </div>
+                    <div class="one83">
+                        <div class="one7"></div>
+                        <p class="one10">Rubber Plant <br>
+                            from $18.00 CAD</p>
+                    </div>
+                </div>
+                <div class="one3">
+                    <div class="one84">
+                        <div class="one22"></div>
+                        <p class="one10">Pheasant Feather <br>
+                            from $18.00 CAD
+                        </p>
+                    </div>
+                    <div class="one85">
+                        <div class="one23">
+                            <p class="one21">New</p>
+                        </div>
+                        <p class="one10">Summer Bouquet <br>
+                            from $18.00 CAD</p>
+                    </div>
+                    <div class="one86">
+                        <div class="one24">
+                            <div class="dropdown4">
+                            </div>
+                        </div>
+                        <p class="one10">Sperm Whale <br>
+                            from $18.00 CAD</p>
+                    </div>
+                    <div class="one87">
+                        <div class="one25"></div>
+                        <p class="one10">Wake <br>
+                            from $18.00 CAD</p>
+                    </div>
+                </div>
+                <div class="one3">
+                    <div class="one88">
+                        <div class="one26">
+                            <p class="one12">Best <br>Seller</p>
+                        </div>
+                        <div class="one27"></div>
+                        <p class="one10">Shape Shift No. 21 <br>
+                            from $18.00 CAD
+                        </p>
+                    </div>
+                    <div class="one89">
+                        <div class="one28">
+                            <div class="dropdown4">
+                            </div>
+                        </div>
+                        <p class="one10">
+                            Moth No. 2 <br>
+                            from $18.00 CAD</p>
+                    </div>
+                    <div class="one90">
+                        <div class="one29"></div>
+                        <p class="one10">Stem No.2 <br>
+                            from $24.00 CAD</p>
+                    </div>
+                    <div class="one91">
+                        <div class="one11">
+                            <p class="one12">Staff <br>Pick</p>
+                        </div>
+                        <div class="one30"></div>
+                        <p class="one10">Stack No.11 <br>
+                            from $28.00 CAD</p>
+                    </div>
+                </div>
+                <div class="section4">
+                    <div class="one40">
+                        <div class="one31">
+                            <h1 class="one32">Follow my Art Journey</h1>
+                            <input class="one33" type="text" placeholder="First Name">
+                            <input class="one34" type="text" placeholder="Email*">
+                            <button class="one35">Sign Up</button>
+                        </div>
+                    </div>
+                    <div class="six">
+                        <div class="six1">
+                            <div class="six2">
+                                <div class="six5"></div>
+                                <p class="six6">Tips on framing prints and <br> paintings</p>
+                                <p class="six7">May 14, 2019 1 min read
+                                </p>
+                            </div>
+                            <div class="six3">
+                                <div class="six8"></div>
+                                <p class="six6">Beginner's guide to art <br> supplies</p>
+                                <p class="six7">May 02, 2019 1 min read
+                                </p>
+                            </div>
+                            <div class="six4">
+                                <div class="six9"></div>
+                                <p class="six6">Studio Workshops: Painting <br> 101</p>
+                                <p class="six7">April 17, 2019 1 min read
+                                </p>
+                            </div>
+                        </div>
+                        <div class="logo">
+                        </div>
+                       <div class="six18">
+                        <p class="six10">All the lovely artwork in this demo shop is courtesy of artist <b
+                            class="six12">Sarah Martinez</b>. <br>
+                           <p>To purchase, please visit <b class="six11">Snoogs + Wilde.</b></p>
+                       </div>
+                           
+                            <div class="six13">
+                                <p class="six14">Canada ( CAD $) <i class="fa-solid fa-angle-down six15"></i></p>
+                            </div>
+                            <p class="six16">© 2023 Flex Theme Studio. Designed by Out of the Sandbox.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
